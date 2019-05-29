@@ -9,7 +9,6 @@
 import Foundation
 
 struct PlayingCardDeck {
-    
     private(set) var cards = [PlayingCard]()
     
     init() {
@@ -19,6 +18,7 @@ struct PlayingCardDeck {
             }
         }
     }
+    
     mutating func draw() -> PlayingCard? {
         guard cards.count == 0 else {
             return cards.remove(at: Int.random(in: 0...cards.count - 1))
